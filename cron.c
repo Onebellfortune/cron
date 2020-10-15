@@ -74,9 +74,11 @@ int main(void)
 	t = time(NULL);
 	tm = localtime(&t);
 
+
 	while (1)
 	{
-		buf[0] = '\0';	
+	
+	    buf[0] = '\0';	
 		
 		//insert your code
 		//##  hints  ##
@@ -92,6 +94,7 @@ int main(void)
 		pid=fork();
 		if(pid==0){
 		    execl("/bin/sh","/bin/sh",argv[2],(char*)NULL);
+		 
 		}else{
 		    wait(NULL);
 		}
